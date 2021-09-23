@@ -7,6 +7,7 @@ defmodule SimpleRequest.Application do
 
   def start(_type, _args) do
     children = [
+      SimpleRequest.PromEx,
       # Start the Ecto repository
       SimpleRequest.Repo,
       # Start the Telemetry supervisor

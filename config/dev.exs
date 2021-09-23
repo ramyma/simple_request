@@ -22,6 +22,28 @@ config :simple_request, SimpleRequestWeb.Endpoint,
   check_origin: false,
   watchers: []
 
+config :simple_request, SimpleRequest.PromEx,
+  manual_metrics_start_delay: :no_delay,
+  drop_metrics_groups: [],
+  grafana: [
+    host: System.get_env("GRAFANA_HOST", "http://localhost:3000"),
+    # auth_token: System.get_env("GRAFANA_TOKEN", ""),
+    username: "admin",
+    password: "admin",
+    upload_dashboards_on_start: true,
+    folder_name: "Web App Dashboards",
+    annotate_app_lifecycle: true
+  ]
+
+# ,
+# metrics_server: [
+#   port: 9090,
+#   path: "/metrics",
+#   protocol: :http,
+#   pool_size: 5,
+#   cowboy_opts: []
+# ]
+
 # ## SSL Support
 #
 # In order to use HTTPS in development, a self-signed

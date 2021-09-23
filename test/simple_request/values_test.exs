@@ -83,23 +83,5 @@ defmodule SimpleRequest.ValuesTest do
       value = value_fixture()
       assert %Ecto.Changeset{} = Values.change_value(value)
     end
-
-    # test "upsert_all/1 upserts passed values" do
-    #   value1 = value_fixture(%{key: "test1", value: Enum.random(1..10)})
-    #   value2 = value_fixture(%{key: "test2", value: Enum.random(1..10)})
-
-    #   values =
-    #     2..5
-    #     |> Enum.map(
-    #       &Map.from_struct(%Value{
-    #         key: "test#{&1}",
-    #         value: if(&1 == 2, do: value2.value + 5, else: Enum.random(12..20))
-    #       })
-    #     )
-
-    #   assert {4, nil} = Values.upsert_all(values)
-
-    #   assert [value1, value2] == Values.list_values()
-    # end
   end
 end

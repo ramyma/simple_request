@@ -24,7 +24,7 @@ Simple Request is a demo Elixir project that allows the user to increment a valu
 - Docker v20.10.*
 - Docker compose v1.28.*
 
-> Make sure the `docker` folder on the root of this repo and all it's subfolders have read/write permissions for any user on your system
+> Make sure the `docker` folder on the root of this repo and all its subfolders have read/write permissions for any user on your system
 
 ## Start Here
 
@@ -63,7 +63,7 @@ A Supervisor (Updater.Supervisor) was created to add another layer of separation
 
 When the */increment* endpoint is hit via a POST request, the router would pass the request to the controller's increment action, which in turn calls the interface delegated increment function exposed on the values context module. The increment callback within Updater.Server is eventually triggered via a *call* request, which returns the passed key with its stored value (defaulting to 0) incremented by the passed increment value.
 
-The Updater.Server would invoke the persistence logic for every tick. The persistence logic defined within Update.Core would load the stored entities for the passed in values (buffered in the Update.Server state), perform some preparation and splitting for the state values; splitting the values into two lists: values to update and vales to insert.
+The Updater.Server would invoke the persistence logic for every tick. The persistence logic defined within Update.Core would load the stored entities for the passed in values (buffered in the Update.Server state), perform some preparation and splitting for the state values; splitting the values into two lists: values to update and values to insert.
 The values context functions are used to update and insert the entries if needed (more on that later).
 
 ## Metrics

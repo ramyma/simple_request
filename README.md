@@ -1,6 +1,6 @@
 # 🧪 Simple Request
 
-Simple Request is a demo Elixir project that allows the user to increment a value identified by a given key and an increment value.
+Simple Request is a demo Elixir project that allows the user to increment a value identified by a given key using an increment value.
 
 - [🧪 Simple Request](#-simple-request)
   - [Prerequisites](#prerequisites)
